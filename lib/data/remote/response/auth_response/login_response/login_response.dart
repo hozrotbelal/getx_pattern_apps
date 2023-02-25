@@ -1,4 +1,3 @@
-import 'package:ezcartapp/data/remote/model/user/user.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'login_response.g.dart';
 
@@ -19,12 +18,10 @@ class LoginResponse {
   @JsonKey(defaultValue: null)
   late DateTime? expires_at;
 
-  @JsonKey(defaultValue: null)
-  late User? user;
-
   LoginResponse();
 
-  factory LoginResponse.fromJson(Map<String, dynamic> json) => _$LoginResponseFromJson(json);
+  factory LoginResponse.fromJson(Map<String, dynamic> json) =>
+      _$LoginResponseFromJson(json);
 
   Map<String, dynamic> toJson() => _$LoginResponseToJson(this);
 }

@@ -1,6 +1,7 @@
-import 'package:ezcartapp/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../constants.dart';
 
 class ShimmerHelper {
   buildBasicShimmer(
@@ -16,7 +17,7 @@ class ShimmerHelper {
     );
   }
 
-  buildListShimmer({item_count = 10,item_height = 100.0}) {
+  buildListShimmer({item_count = 10, item_height = 100.0}) {
     return ListView.builder(
       itemCount: item_count,
       scrollDirection: Axis.vertical,

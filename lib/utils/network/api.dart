@@ -2,10 +2,10 @@ import 'dart:collection';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:ezcartapp/base/exception/app_exception.dart';
-import 'package:ezcartapp/data/local/service/local_service.dart';
-import 'package:ezcartapp/util/helper/text.dart';
 import 'package:get/get.dart' as GetX;
+import '../../base/exception/app_exception.dart';
+import '../../data/local/service/local_service.dart';
+import '../helper/text.dart';
 
 class ApiUtil {
   static Dio? client;
@@ -27,7 +27,9 @@ class ApiUtil {
 
   static void _handleException(dynamic e) {
     if ((e != null) && (e is DioError) && (e.message.trim().isNotEmpty)) {
-      if (e.type == DioErrorType.response && e.response != null && e.response!.statusCode == HttpStatus.unauthorized) {
+      if (e.type == DioErrorType.response &&
+          e.response != null &&
+          e.response!.statusCode == HttpStatus.unauthorized) {
         throw AppException(e.response!.statusMessage);
         // TODO: Send to client unauthorized route
       } else if (e.error is SocketException) {

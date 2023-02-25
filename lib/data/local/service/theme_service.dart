@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ezcartapp/constants.dart';
-import 'package:ezcartapp/util/lib/preference.dart';
+
+import '../../../constants.dart';
+import '../../../utils/preference/preference.dart';
 
 class ThemeService extends GetxService {
   late PreferenceUtil _preferenceUtil;
@@ -102,21 +103,21 @@ const lightSliderTheme = const SliderThemeData(
 );
 */
 
-const _lightFloatingActionButtonTheme = const FloatingActionButtonThemeData(
+const _lightFloatingActionButtonTheme = FloatingActionButtonThemeData(
   backgroundColor: colorLightGray2,
   foregroundColor: colorLightOrange1,
 );
 
-const _lightBottomNavigationBarTheme = const BottomNavigationBarThemeData(
+const _lightBottomNavigationBarTheme = BottomNavigationBarThemeData(
   backgroundColor: colorLightGray1,
   selectedItemColor: Colors.white,
   unselectedItemColor: colorLightGray3,
-  selectedLabelStyle: const TextStyle(
+  selectedLabelStyle: TextStyle(
     fontSize: 16.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w500,
   ),
-  unselectedLabelStyle: const TextStyle(
+  unselectedLabelStyle: TextStyle(
     fontSize: 16.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w500,
@@ -124,56 +125,56 @@ const _lightBottomNavigationBarTheme = const BottomNavigationBarThemeData(
   ),
 );
 
-const _lightTextTheme = const TextTheme(
-  headline6: const TextStyle(
+const _lightTextTheme = TextTheme(
+  headline6: TextStyle(
     color: colorLightGray3,
     fontSize: 18.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w700,
   ),
-  headline5: const TextStyle(
+  headline5: TextStyle(
     color: colorLightGray3,
     fontSize: 20.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w700,
   ),
-  headline4: const TextStyle(
+  headline4: TextStyle(
     color: colorLightGray3,
     fontSize: 24.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w700,
   ),
-  headline3: const TextStyle(
+  headline3: TextStyle(
     color: colorLightGray3,
     fontSize: 28.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w700,
   ),
-  headline2: const TextStyle(
+  headline2: TextStyle(
     color: colorLightGray3,
     fontSize: 32.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w700,
   ),
-  headline1: const TextStyle(
+  headline1: TextStyle(
     color: colorLightGray3,
     fontSize: 48.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w700,
   ),
-  bodyText2: const TextStyle(
+  bodyText2: TextStyle(
     color: colorLightGray3,
     fontSize: 16.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w400,
   ),
-  bodyText1: const TextStyle(
+  bodyText1: TextStyle(
     color: colorLightGray3,
     fontSize: 14.0,
     fontFamily: fontFamilyRoboto,
     fontWeight: FontWeight.w400,
   ),
-  caption: const TextStyle(
+  caption: TextStyle(
     color: colorLightGray3,
     fontSize: 12.0,
     fontFamily: fontFamilyRoboto,
@@ -190,7 +191,7 @@ final _lightTheme = ThemeData(
   floatingActionButtonTheme: _lightFloatingActionButtonTheme,
   bottomNavigationBarTheme: _lightBottomNavigationBarTheme,
   textTheme: _lightTextTheme,
-  iconTheme: IconThemeData(color: colorLightGray8),
+  iconTheme: const IconThemeData(color: colorLightGray8),
   backgroundColor: colorLightGray9,
   indicatorColor: colorLightGray10,
   /*cardColor: colorLightPrimary2,

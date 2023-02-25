@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:ezcartapp/data/remote/model/user/user.dart';
-import 'package:ezcartapp/util/helper/text.dart';
 import 'package:get/get.dart';
-import 'package:ezcartapp/constants.dart';
-import 'package:ezcartapp/util/lib/preference.dart';
+
+import '../../../constants.dart';
+import '../../../utils/helper/text.dart';
+import '../../../utils/preference/preference.dart';
 
 class LocalService extends GetxService {
   late PreferenceUtil _preferenceUtil;
@@ -121,25 +121,25 @@ class LocalService extends GetxService {
   //       : null;
   // }
 
-  Future<void> storeUser(User response) async {
-    return _preferenceUtil.write<String>(
-      keyUser,
-      jsonEncode(response.toJson()),
-    );
-  }
+  // Future<void> storeUser(User response) async {
+  //   return _preferenceUtil.write<String>(
+  //     keyUser,
+  //     jsonEncode(response.toJson()),
+  //   );
+  // }
 
-  User? getUser() {
-    final encodedResponse = _preferenceUtil.read<String>(
-      keyUser,
-      defaultValue: defaultString,
-    )!;
+  // User? getUser() {
+  //   final encodedResponse = _preferenceUtil.read<String>(
+  //     keyUser,
+  //     defaultValue: defaultString,
+  //   )!;
 
-    return TextUtil.isNotEmpty(encodedResponse)
-        ? User.fromJson(
-            jsonDecode(encodedResponse) as Map<String, dynamic>,
-          )
-        : null;
-  }
+  //   return TextUtil.isNotEmpty(encodedResponse)
+  //       ? User.fromJson(
+  //           jsonDecode(encodedResponse) as Map<String, dynamic>,
+  //         )
+  //       : null;
+  // }
 
   Future<void> removeLoginResponse() async {
     await _preferenceUtil.delete(keyAccessToken);

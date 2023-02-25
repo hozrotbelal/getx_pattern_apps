@@ -1,8 +1,10 @@
-import 'package:ezcartapp/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
+
 class InputDecorations {
-  static InputDecoration buildInputDecoration_1({radius = 5.0, hint_text = ""}) {
+  static InputDecoration buildInputDecoration_1(
+      {radius = 5.0, hint_text = ""}) {
     return InputDecoration(
         hintText: hint_text,
         hintStyle: const TextStyle(fontSize: 12.0, color: textfieldGrey),
@@ -27,9 +29,15 @@ class InputDecorations {
         hintStyle: const TextStyle(fontSize: 12.0, color: textfieldGrey),
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: textfieldGrey, width: 0.5),
-          borderRadius: BorderRadius.only(topRight: Radius.circular(5.0), bottomRight: Radius.circular(5.0)),
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(5.0),
+              bottomRight: Radius.circular(5.0)),
         ),
-        focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color: textfieldGrey, width: 1.0), borderRadius: BorderRadius.only(topRight: Radius.circular(5.0), bottomRight: Radius.circular(5.0))),
+        focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: textfieldGrey, width: 1.0),
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(5.0),
+                bottomRight: Radius.circular(5.0))),
         contentPadding: EdgeInsets.only(left: 16.0));
   }
 }
